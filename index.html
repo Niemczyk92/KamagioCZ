@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAMAGIO – Stylish Hydration</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #fefefe;
+      color: #222;
+      padding: 100px 20px 60px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 4rem;
+      margin: 0 0 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #2c3e50;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: 0 auto;
+      color: #555;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      width: 90%;
+      margin: 60px auto 100px;
+      background: #fcfcfc;
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.07);
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 35px;
+      color: #2c3e50;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    ul li {
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+      position: relative;
+      padding-left: 35px;
+      color: #444;
+      font-weight: 500;
+    }
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .cta p {
+      text-align: center;
+      font-size: 1.15rem;
+      margin-bottom: 15px;
+      color: #444;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    input[type="email"] {
+      flex-grow: 1;
+      min-width: 280px;
+      padding: 14px 18px;
+      font-size: 1.1rem;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      transition: border-color 0.3s ease;
+      color: #222;
+      background: #fff;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #2980b9;
+      box-shadow: 0 0 8px rgb(41 128 185 / 0.4);
+    }
+    button {
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgb(41 128 185 / 0.4);
+    }
+    button:hover {
+      background-color: #1c5985;
+      box-shadow: 0 6px 20px rgb(28 89 133 / 0.6);
+    }
+    #formMessage {
+      text-align: center;
+      margin-top: 22px;
+      color: #27ae60;
+      font-weight: 600;
+      font-size: 1.15rem;
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background: #f7f9fc;
+      font-size: 0.95rem;
+      color: #888;
+      user-select: none;
+      box-shadow: inset 0 1px 0 #ddd;
+    }
+    @media (max-width: 480px) {
+      header h1, header img {
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto 15px;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      main {
+        padding: 40px 25px;
+        margin: 40px auto 70px;
+      }
+      form {
+        flex-direction: column;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Logo instead of text -->
+  <img src="kamagio.svg" alt="KAMAGIO logo" />
+  <p>Stylish hydration you’ll love. Tumblers, bottles, and accessories – coming soon.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Get 20% Off</h2>
+    <div class="cta">
+      <p>Use discount code <strong>KAMAGIO20</strong> when we launch and save 20%.</p>
+      <p>Leave your email and we’ll notify you as soon as we go live!</p>
+    </div>
+
+    <form id="subscribeForm" action="https://formspree.io/f/xeokzvoo" method="POST" novalidate>
+      <input type="email" name="email" placeholder="Your email" required aria-label="Email" />
+      <button type="submit">Get Discount</button>
+    </form>
+
+    <p id="formMessage">Thanks for signing up! We’ll notify you soon.</p>
+  </section>
+
+  <section>
+    <h2>What’s Coming?</h2>
+    <ul>
+      <li>Stainless steel tumblers with vacuum insulation – keep your drink hot or cold for hours.</li>
+      <li>Elegant designer bottles that fit perfectly in your hand or stylish bag.</li>
+      <li>Stylish accessories – lids, holders, and covers that protect and decorate your favorite tumbler.</li>
+      <li>Gift sets, perfect for every occasion – birthdays, holidays, or just because.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 KAMAGIO – All rights reserved
+</footer>
+
+<script>
+  const form = document.getElementById('subscribeForm');
+  const message = document.getElementById('formMessage');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        message.style.display = 'block';
+        form.reset();
+      } else {
+        alert('Something went wrong, please try again.');
+      }
+    } catch (error) {
+      alert('Something went wrong, please try again.');
+    }
+  });
+</script>
+
+</body>
+</html>
