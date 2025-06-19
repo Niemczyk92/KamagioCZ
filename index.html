@@ -6,241 +6,700 @@
   
   <title>KAMAGIO – Stylová hydratace | Tumblery, lahve, doplňky</title>
   
-  <meta name="description" content="KAMAGIO nabízí nerezové tumblery s vakuovou izolací, designové lahve a stylové doplňky. Stylová hydratace, kterou si zamiluješ. Připravujeme eshop!" />
-  
-  <meta name="keywords" content="tumblery, lahve, nerezové lahve, vakuová izolace, doplňky, KAMAGIO, stylová hydratace, eshop" />
-  
+  <!-- SEO Meta tags -->
+  <meta name="description" content="KAMAGIO nabízí prémiové nerezové tumblery s vakuovou izolací, designové lahve a stylové doplňky. Stylová hydratace pro moderní životní styl. Získejte 20% slevu při spuštění!" />
+  <meta name="keywords" content="tumblery, nerezové lahve, vakuová izolace, designové lahve, stylové doplňky, KAMAGIO, hydratace, eshop, slevy, dárkové sady" />
   <meta name="author" content="KAMAGIO" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="cs" />
   
   <!-- Open Graph pro sociální sítě -->
-  <meta property="og:title" content="KAMAGIO – Stylová hydratace" />
-  <meta property="og:description" content="KAMAGIO nabízí nerezové tumblery, designové lahve a stylové doplňky. Připravujeme eshop!" />
+  <meta property="og:title" content="KAMAGIO – Stylová hydratace | 20% sleva při spuštění" />
+  <meta property="og:description" content="Prémiové nerezové tumblery, designové lahve a stylové doplňky. Získejte 20% slevu s kódem KAMAGIO20!" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.kamagio.cz" />
   <meta property="og:image" content="https://www.kamagio.cz/kamagio-logo.svg" />
+  <meta property="og:site_name" content="KAMAGIO" />
+  <meta property="og:locale" content="cs_CZ" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="KAMAGIO – Stylová hydratace" />
-  <meta name="twitter:description" content="KAMAGIO nabízí nerezové tumblery, designové lahve a stylové doplňky. Připravujeme eshop!" />
+  <meta name="twitter:description" content="Prémiové nerezové tumblery a designové lahve. 20% sleva při spuštění!" />
   <meta name="twitter:image" content="https://www.kamagio.cz/kamagio-logo.svg" />
-  <title>KAMAGIO – Stylová hydratace</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="kamagio.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KAMAGIO",
+    "url": "https://www.kamagio.cz",
+    "logo": "https://www.kamagio.cz/kamagio-logo.svg",
+    "description": "Stylová hydratace - nerezové tumblery, designové lahve a stylové doplňky",
+    "sameAs": []
+  }
+  </script>
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --accent-color: rgba(138, 175, 111, 0.8);
+      --accent-light: rgba(138, 175, 111, 0.1);
+      --accent-hover: rgba(138, 175, 111, 0.9);
+      --black: #000000;
+      --white: #ffffff;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --gray-300: #dee2e6;
+      --gray-400: #ced4da;
+      --gray-500: #adb5bd;
+      --gray-600: #6c757d;
+      --gray-700: #495057;
+      --gray-800: #343a40;
+      --gray-900: #212529;
+    }
 
     * {
       box-sizing: border-box;
-    }
-    body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #333;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--gray-900);
       line-height: 1.6;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    /* Kinetic Typography Animation */
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromRight {
+      0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Hero Section - Full viewport height */
+    .hero {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background: #fefefe;
-      color: #222;
-      padding: 100px 20px 60px;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
-    }
-    header h1 {
-      font-weight: 600;
-      font-size: 4rem;
-      margin: 0 0 15px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #2c3e50;
-    }
-    header p {
-      font-weight: 400;
-      font-size: 1.3rem;
-      max-width: 650px;
-      margin: 0 auto;
-      color: #555;
-    }
-    main {
-      flex-grow: 1;
-      max-width: 900px;
-      width: 90%;
-      margin: 60px auto 100px;
-      background: #fcfcfc;
-      padding: 50px 40px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgb(0 0 0 / 0.07);
-    }
-    section {
-      margin-bottom: 60px;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 35px;
-      color: #2c3e50;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-      max-width: 550px;
-      margin: 0 auto;
-    }
-    ul li {
-      font-size: 1.2rem;
-      margin-bottom: 18px;
+      padding: 0 20px;
       position: relative;
-      padding-left: 35px;
-      color: #444;
-      font-weight: 500;
+      background: linear-gradient(135deg, var(--white) 0%, var(--gray-100) 100%);
     }
-    ul li::before {
-      content: "✔️";
+
+    .hero::before {
+      content: '';
       position: absolute;
-      left: 0;
       top: 0;
-      font-size: 1.3rem;
-      line-height: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 70%, var(--accent-light) 0%, transparent 50%);
     }
-    .cta p {
-      text-align: center;
-      font-size: 1.15rem;
-      margin-bottom: 15px;
-      color: #444;
-      max-width: 650px;
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .logo {
+      width: clamp(200px, 25vw, 350px);
+      height: auto;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
+      animation: scaleIn 1s ease-out;
+    }
+
+    .hero-title {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: var(--gray-700);
+      margin-bottom: 3rem;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      font-weight: 500;
+      animation: fadeInUp 1s ease-out 0.3s both;
     }
-    form {
-      display: flex;
-      justify-content: center;
-      margin-top: 25px;
-      flex-wrap: wrap;
-      gap: 14px;
+
+    .hero-title strong {
+      font-weight: 600;
+      color: var(--gray-900);
     }
-    input[type="email"] {
-      flex-grow: 1;
-      min-width: 280px;
-      padding: 14px 18px;
-      font-size: 1.1rem;
-      border: 2px solid #ccc;
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 60px;
+      background: var(--gray-300);
+      border-radius: 1px;
+      animation: fadeInUp 1s ease-out 1s both;
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: var(--accent-color);
+      border-radius: 1px;
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(200%); }
+    }
+
+    /* Main content */
+    .main-content {
+      max-width: min(1200px, 90vw);
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    /* Discount Section with Asymmetric Design */
+    .discount-section {
+      background: var(--black);
+      color: var(--white);
+      padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 6vw, 4rem);
+      border-radius: 0 0 50px 0;
+      position: relative;
+      margin-bottom: 6rem;
+      overflow: hidden;
+    }
+
+    .discount-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, var(--accent-color) 0%, transparent 60%);
+      opacity: 0.1;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.1; }
+      50% { transform: scale(1.1); opacity: 0.2; }
+    }
+
+    .discount-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .discount-badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: var(--black);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      margin-bottom: 1.5rem;
+      animation: slideInFromLeft 0.8s ease-out;
+    }
+
+    .discount-title {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 900;
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+      animation: slideInFromRight 0.8s ease-out 0.2s both;
+    }
+
+    .discount-subtitle {
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .discount-code {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      padding: 1rem 2rem;
       border-radius: 12px;
-      transition: border-color 0.3s ease;
-      color: #222;
-      background: #fff;
+      font-weight: 700;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      margin: 1rem 0 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: scaleIn 0.8s ease-out 0.6s both;
+      border: 2px solid transparent;
     }
-    input[type="email"]:focus {
+
+    .discount-code:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Email Form */
+    .email-form {
+      display: flex;
+      gap: 1rem;
+      max-width: 500px;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+      flex-wrap: wrap;
+    }
+
+    .email-input {
+      flex: 1;
+      min-width: 280px;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      border: 2px solid var(--gray-800);
+      border-radius: 12px;
+      background: var(--gray-900);
+      color: var(--white);
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .email-input:focus {
       outline: none;
-      border-color: #2980b9;
-      box-shadow: 0 0 8px rgb(41 128 185 / 0.4);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(138, 175, 111, 0.2);
     }
-    button {
-      background-color: #2980b9;
-      color: #fff;
+
+    .email-input::placeholder {
+      color: var(--gray-500);
+    }
+
+    .submit-btn {
+      background: var(--accent-color);
+      color: var(--black);
       border: none;
       border-radius: 12px;
-      padding: 14px 28px;
+      padding: 1rem 2rem;
       font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      font-family: inherit;
       white-space: nowrap;
-      box-shadow: 0 4px 15px rgb(41 128 185 / 0.4);
+      min-width: 140px;
     }
-    button:hover {
-      background-color: #1c5985;
-      box-shadow: 0 6px 20px rgb(28 89 133 / 0.6);
+
+    .submit-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(138, 175, 111, 0.3);
     }
-    #formMessage {
-      text-align: center;
-      margin-top: 22px;
-      color: #27ae60;
-      font-weight: 600;
-      font-size: 1.15rem;
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .success-message {
       display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(40, 167, 69, 0.1);
+      color: #28a745;
+      border-radius: 8px;
+      font-weight: 500;
+      border-left: 4px solid #28a745;
     }
-    footer {
+
+    /* Products Section */
+    .products-section {
+      margin-top: 6rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
       text-align: center;
-      padding: 30px 10px;
-      background: #f7f9fc;
-      font-size: 0.95rem;
-      color: #888;
-      user-select: none;
-      box-shadow: inset 0 1px 0 #ddd;
+      margin-bottom: 3rem;
+      color: var(--gray-900);
+      position: relative;
     }
-    @media (max-width: 480px) {
-      header h1, header img {
-        max-width: 280px;
-        height: auto;
-        margin: 0 auto 15px;
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+
+    .product-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    .product-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--gray-900);
+    }
+
+    .product-description {
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 6rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 100vh;
+        padding: 2rem 1rem;
       }
-      header p {
-        font-size: 1.1rem;
+
+      .main-content {
+        padding: 4rem 1rem;
       }
-      main {
-        padding: 40px 25px;
-        margin: 40px auto 70px;
+
+      .discount-section {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0 0 30px 0;
       }
-      form {
+
+      .email-form {
         flex-direction: column;
       }
-      button {
+
+      .email-input,
+      .submit-btn {
         width: 100%;
       }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .product-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 1rem;
+      }
+
+      .discount-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .discount-title {
+        line-height: 1.1;
+      }
+
+      .section-title {
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* Scroll animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Performance optimizations */
+    .product-card,
+    .discount-code,
+    .submit-btn {
+      will-change: transform;
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus styles */
+    .email-input:focus,
+    .submit-btn:focus,
+    .discount-code:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <!-- Logo instead of text -->
-  <img src="kamagio.svg" alt="KAMAGIO logo" />
-  <p>Stylová hydratace, kterou si zamiluješ. Tumblery, láhve a doplňky – již brzy online.</p>
-</header>
+<section class="hero">
+  <div class="hero-content">
+    <img src="kamagio.svg" alt="KAMAGIO logo" class="logo" />
+    <h1 class="hero-title">
+      <strong>Stylová hydratace</strong>, kterou si zamiluješ.<br>
+      Tumblery, láhve a doplňky – <strong>již brzy online</strong>.
+    </h1>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true"></div>
+</section>
 
-<main>
+<main class="main-content">
+  <section class="discount-section">
+    <div class="discount-content">
+      <div class="discount-badge">Exkluzivní nabídka</div>
+      <h2 class="discount-title">20% SLEVA</h2>
+      <p class="discount-subtitle">Buď mezi prvními a ušetři s kódem</p>
+      
+      <div class="discount-code" onclick="copyToClipboard('KAMAGIO20')" role="button" tabindex="0">
+        KAMAGIO20
+      </div>
+      
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">
+        Zanech nám svůj e-mail a upozorníme tě hned, jak spustíme eshop.
+      </p>
 
-  <section>
-    <h2>Získej 20% slevu</h2>
-    <div class="cta">
-      <p>Použij slevový kód <strong>KAMAGIO20</strong> při spuštění eshopu a ušetři 20 %.</p>
-      <p>Zanech nám svůj e-mail a my tě upozorníme hned, jak budeme live!</p>
+      <form class="email-form" id="subscribeForm" action="https://formspree.io/f/xeokzvoo" method="POST" novalidate>
+        <input 
+          type="email" 
+          name="email" 
+          class="email-input" 
+          placeholder="Tvůj e-mail" 
+          required 
+          aria-label="Email adresa"
+        />
+        <button type="submit" class="submit-btn">
+          Chci slevu
+        </button>
+      </form>
+
+      <div class="success-message" id="formMessage">
+        ✨ Děkujeme za přihlášení! Brzy tě upozorníme.
+      </div>
     </div>
-
-    <form id="subscribeForm" action="https://formspree.io/f/xeokzvoo" method="POST" novalidate>
-      <input type="email" name="email" placeholder="Tvůj e-mail" required aria-label="Email" />
-      <button type="submit">Chci slevu</button>
-    </form>
-
-    <p id="formMessage">Děkujeme za přihlášení! Brzy tě upozorníme.</p>
   </section>
 
-  <section>
-    <h2>Co chystáme?</h2>
-    <ul>
-      <li>Nerezové tumblery s vakuovou izolací – udrží tvůj nápoj teplý i studený celé hodiny.</li>
-      <li>Elegantní designové láhve, které padnou do ruky i do stylové kabelky.</li>
-      <li>Stylové doplňky – víčka, držáky a obaly, které ochrání a ozdobí tvůj oblíbený tumbler.</li>
-      <li>Dárkové sady, ideální jako dárek pro každou příležitost – narozeniny, Vánoce i jen tak.</li>
-    </ul>
+  <section class="products-section">
+    <h2 class="section-title animate-on-scroll">Co chystáme?</h2>
+    <div class="products-grid">
+      <div class="product-card animate-on-scroll">
+        <span class="product-icon">🥤</span>
+        <h3 class="product-title">Nerezové tumblery</h3>
+        <p class="product-description">S vakuovou izolací – udrží tvůj nápoj teplý i studený celé hodiny.</p>
+      </div>
+      <div class="product-card animate-on-scroll">
+        <span class="product-icon">💧</span>
+        <h3 class="product-title">Designové láhve</h3>
+        <p class="product-description">Elegantní láhve, které padnou do ruky i do stylové kabelky.</p>
+      </div>
+      <div class="product-card animate-on-scroll">
+        <span class="product-icon">✨</span>
+        <h3 class="product-title">Stylové doplňky</h3>
+        <p class="product-description">Víčka, držáky a obaly, které ochrání a ozdobí tvůj oblíbený tumbler.</p>
+      </div>
+      <div class="product-card animate-on-scroll">
+        <span class="product-icon">🎁</span>
+        <h3 class="product-title">Dárkové sady</h3>
+        <p class="product-description">Ideální jako dárek pro každou příležitost – narozeniny, Vánoce i jen tak.</p>
+      </div>
+    </div>
   </section>
-
 </main>
 
-<footer>
+<footer class="footer">
   © 2025 KAMAGIO – Všechna práva vyhrazena
 </footer>
 
 <script>
+  // Copy discount code to clipboard
+  function copyToClipboard(text) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        showCopyFeedback();
+      }).catch(() => {
+        fallbackCopyTextToClipboard(text);
+      });
+    } else {
+      fallbackCopyTextToClipboard(text);
+    }
+  }
+
+  function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+      showCopyFeedback();
+    } catch (err) {
+      alert('Kód: ' + text);
+    }
+    
+    document.body.removeChild(textArea);
+  }
+
+  function showCopyFeedback() {
+    const code = document.querySelector('.discount-code');
+    const originalText = code.textContent;
+    const originalBg = code.style.background;
+    
+    code.textContent = 'Zkopírováno! ✓';
+    code.style.background = '#28a745';
+    code.style.color = 'white';
+    
+    setTimeout(() => {
+      code.textContent = originalText;
+      code.style.background = originalBg;
+      code.style.color = '';
+    }, 2000);
+  }
+
+  // Add keyboard support for discount code
+  document.querySelector('.discount-code').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      copyToClipboard('KAMAGIO20');
+    }
+  });
+
+  // Form submission
   const form = document.getElementById('subscribeForm');
   const message = document.getElementById('formMessage');
+  const submitBtn = form.querySelector('.submit-btn');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Odesílám...';
+    submitBtn.disabled = true;
 
     const formData = new FormData(form);
 
@@ -256,13 +715,59 @@
       if (response.ok) {
         message.style.display = 'block';
         form.reset();
+        
+        submitBtn.textContent = '✓ Odesláno';
+        submitBtn.style.background = '#28a745';
+        
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+        }, 3000);
       } else {
-        alert('Něco se pokazilo, zkus to prosím znovu.');
+        throw new Error('Network response was not ok');
       }
     } catch (error) {
       alert('Něco se pokazilo, zkus to prosím znovu.');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     }
   });
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, observerOptions);
+
+  // Initialize scroll animations
+  document.addEventListener('DOMContentLoaded', () => {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach((el, index) => {
+      el.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(el);
+    });
+  });
+
+  // Smooth scroll for scroll indicator
+  document.querySelector('.scroll-indicator').addEventListener('click', () => {
+    document.querySelector('.main-content').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
+  // Performance optimization: Reduce animations on slower devices
+  if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+    document.documentElement.style.setProperty('--animation-duration', '0.3s');
+  }
 </script>
 
 </body>
